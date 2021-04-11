@@ -1,17 +1,3 @@
-var valor1;
-var valor2;
-var valor3;
-var valor4;
-var valor5;
-var valor6;
-
-var valor11;
-var valor22;
-var valor33;
-var valor44;
-var valor55;
-var valor66;
-
 var cond;
 
 var operacao;
@@ -22,70 +8,14 @@ var num2;
 
 
 function numero(n){
-
-    if(!cond){
-
-        if(!valor1){
-            valor1 = n;
-            document.getElementById("visor").innerText = valor1;
-            
-        } else if (!valor2){
-            valor2 = n;
-            document.getElementById("visor").innerText = valor1+""+valor2;
-            
-            
-        } else if(!valor3){
-            valor3 = n;
-            document.getElementById("visor").innerText = valor1+""+valor2+""+valor3;
-            
-        } else if(!valor4){
-            valor4 = n;
-            document.getElementById("visor").innerText = valor1+""+valor2+""+valor3+valor4;
-            
-        } else if(!valor5){
-            valor5 = n;
-            document.getElementById("visor").innerText = valor1+""+valor2+""+valor3+valor4+""+valor5;
-            
-        } else if(!valor6){
-            valor6 = n;
-            document.getElementById("visor").innerText = valor1+""+valor2+""+valor3+""+valor4+""+valor5+""+valor6;
-            
-        } 
-
-    } else {
-
-        if(!valor11){
-            valor11 = n;
-            document.getElementById("visor").innerText = valor11;
-            
-        } else if (!valor22){
-            valor22 = n;
-            document.getElementById("visor").innerText = valor11+""+valor22;
-            
-            
-        } else if(!valor33){
-            valor33 = n;
-            document.getElementById("visor").innerText = valor11+""+valor22+""+valor33;
-            
-        } else if(!valor44){
-            valor44 = n;
-            document.getElementById("visor").innerText = valor11+""+valor22+""+valor33+valor44;
-            
-        } else if(!valor55){
-            valor55 = n;
-            document.getElementById("visor").innerText = valor11+""+valor22+""+valor33+valor44+""+valor55;
-            
-        } else if(!valor66){
-            valor66 = n;
-            document.getElementById("visor").innerText = valor11+""+valor22+""+valor33+""+valor44+""+valor55+""+valor66;
-            
-        } 
-
-    }
-    
-
+    var numero = document.getElementById('visor').innerText
+    document.getElementById('visor').innerText = numero.toString() + n.toString()
 }
 
+
+function clear() {
+    document.getElementById('visor').innerText = ' '
+}
 
 function somar(){
     cond = 1;
@@ -101,6 +31,7 @@ function somar(){
         document.getElementById("visor").innerText = num2;
     }
     
+    clear()
 }
 
 function subtrair(){
@@ -117,6 +48,7 @@ function subtrair(){
         document.getElementById("visor").innerText = num2;
     }
     
+    clear()
 }
 
 function multiplicar(){
@@ -133,6 +65,7 @@ function multiplicar(){
         document.getElementById("visor").innerText = num2;
     }
     
+    clear()
 }
 
 function dividir(){
@@ -148,6 +81,8 @@ function dividir(){
         console.log(num2);
         document.getElementById("visor").innerText = num2;
     }  
+
+    clear()
 }
 
 function sinal(){
