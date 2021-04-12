@@ -19,7 +19,7 @@ function clear() {
 
 function somar(){
     cond = 1;
-    operacao = 1;
+    operacao = "add";
  
     if(!num1){
         num1 = parseFloat((document.getElementById("resp").innerText));
@@ -36,7 +36,7 @@ function somar(){
 
 function subtrair(){
     cond = 1;
-    operacao = 2;
+    operacao = "sub";
  
     if(!num1){
         num1 = parseFloat((document.getElementById("resp").innerText));
@@ -53,7 +53,7 @@ function subtrair(){
 
 function multiplicar(){
     cond = 1;
-    operacao = 3;
+    operacao = "mult";
  
     if(!num1){
         num1 = parseFloat((document.getElementById("resp").innerText));
@@ -70,7 +70,7 @@ function multiplicar(){
 
 function dividir(){
     cond = 1;
-    operacao = 4;
+    operacao = "slice";
  
     if(!num1){
         num1 = parseFloat((document.getElementById("resp").innerText));
@@ -123,16 +123,16 @@ function result(){
     porcentagem = 5
     */
 
-    if(operacao === 1){
+    if(operacao == "add"){
         num2 = parseFloat((document.getElementById("resp").innerText));
         document.getElementById("visor").innerText = num1+num2;
-    } else if(operacao === 2){
+    } else if(operacao == "sub"){
         num2 = parseFloat((document.getElementById("resp").innerText));
         document.getElementById("visor").innerText = num1-num2;
-    } else if(operacao === 3){
+    } else if(operacao == "mult"){
         num2 = parseFloat((document.getElementById("resp").innerText));
         document.getElementById("visor").innerText = num1*num2;
-    } else if(operacao === 4){
+    } else if(operacao == "slice"){
         num2 = parseFloat((document.getElementById("resp").innerText));
         document.getElementById("visor").innerText = num1/num2;
     }
