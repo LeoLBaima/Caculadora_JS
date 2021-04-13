@@ -47,8 +47,14 @@ body{
     margin-left: 2px;
     margin-bottom: 4px;
     font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3px;
 }
-.display label {
-    border-width: 2px;
-    border-color: #7F4793;
+
+.display-name {
+    font-size: 30px;
+    margin-top: -25px;
+    color: #48124A;
 }
