@@ -1,9 +1,10 @@
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: Josefin Sans;
 }
-
 
 body{
     background-color: #48124A;
@@ -16,29 +17,38 @@ body{
 
 .calculadora{
     background-color: #fff;
-    padding: 20px;
+    padding: 50px;
     border-radius: 15px;
-    font-size: 25px;
     text-align: center;
 }
 
 .button{
-    width: 35px;
-    height: 30px;
+    width: 75px;
+    height: 70px;
     cursor: pointer;
-    border: none;
     background-color: #48124A;
+    border-width: 2px;
+    border-color: #7F4793;
+    font-size: 25px;
     color: #fff;
+    margin-right: 4px;
+    margin-bottom: 4px;
 }
 
 .button:hover{
     background-color: #8a2be2;
 }
 
-#resp{
-    width: 150px;
-    height: 30px;
+.display{
+    width: 318px;
+    height: 50px;
     background-color: #48124A;
     color: #fff;
+    margin-left: 2px;
+    margin-bottom: 4px;
+    font-size: 35px;
 }
-
+.display label {
+    border-width: 2px;
+    border-color: #7F4793;
+}

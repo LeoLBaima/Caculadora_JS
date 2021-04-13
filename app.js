@@ -14,7 +14,7 @@ function numero(n){
 
 
 function clear() {
-    document.getElementById('visor').innerText = ' '
+    document.getElementById('visor').innerText = ''
 }
 
 function somar(){
