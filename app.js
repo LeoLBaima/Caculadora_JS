@@ -17,6 +17,10 @@ function clear() {
     document.getElementById('visor').innerText = ''
 }
 
+function limpar() {
+    document.getElementById('visor').innerText = ''
+}
+
 function somar(){
     cond = 1;
     operacao = "add";
