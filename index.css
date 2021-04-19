@@ -33,6 +33,7 @@ body{
     color: #f8f8f8;
     margin-right: 4px;
     margin-bottom: 4px;
+    border-radius: 4px;
 }
 
 .button:hover{
@@ -50,17 +51,35 @@ body{
     margin-left: 2px;
     margin-bottom: 4px;
     padding-right: 5px;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.35);
+}
+
+
+.hist{
+    width: 318px;
+    height: 22px;
+
+    background-color: #8D2FAF;
+    color: #fff;
+    font-size: 18px;
+
+    margin-left: 2px;
+    margin-bottom: 4px;
+    padding-right: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0px;
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.35);
-}
-
-.display-name {
-    font-size: 30px;
-    margin-top: -25px;
-    color: #48124A;
 }
