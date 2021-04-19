@@ -9,16 +9,17 @@ var num2;
 
 function numero(n){
     var numero = document.getElementById('visor').innerText
-    document.getElementById('visor').innerText = numero.toString() + n.toString()
-}
-
-
-function clear() {
-    document.getElementById('visor').innerText = ''
+    if(numero == '0'){
+        numero = '';
+        document.getElementById('visor').innerText = numero.toString() + n.toString()
+    }
+    else{
+        document.getElementById('visor').innerText = numero.toString() + n.toString()
+    }
 }
 
 function limpar() {
-    document.getElementById('visor').innerText = ''
+    document.getElementById('visor').innerText = '0'
 }
 
 function somar(){
@@ -35,24 +36,22 @@ function somar(){
         document.getElementById("visor").innerText = num2;
     }
     
-    clear()
+    limpar()
 }
 
 function subtrair(){
     cond = 1;
     operacao = "sub";
- 
     if(!num1){
         num1 = parseFloat((document.getElementById("resp").innerText));
         console.log(num1);
-        document.getElementById("visor").innerText = num1;
+        document.getElementById("visor").innerText = '0';
     } else{
         num2 = parseFloat((document.getElementById("resp").innerText));
         console.log(num2);
         document.getElementById("visor").innerText = num2;
     }
-    
-    clear()
+    limpar();
 }
 
 function multiplicar(){
@@ -69,7 +68,7 @@ function multiplicar(){
         document.getElementById("visor").innerText = num2;
     }
     
-    clear()
+    limpar()
 }
 
 function dividir(){
@@ -86,17 +85,19 @@ function dividir(){
         document.getElementById("visor").innerText = num2;
     }  
 
-    clear()
+    limpar()
 }
 
 function sinal(){
     var sinal = parseFloat((document.getElementById("resp").innerText));  
     
-    if(sinal>0){
+   if(sinal !=0){
+    if(sinal > 0){
         document.getElementById("visor").innerText = -sinal;
-    } else{
+    } else {
         document.getElementById("visor").innerText = sinal*-1;
     }
+   }
 
 }
 
