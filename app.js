@@ -20,6 +20,8 @@ function numero(n){
 
 function limpar() {
     document.getElementById('display').innerText = '0'
+    num1 = 0;
+    num2 = 0;
 }
 
 function limparhist() {
