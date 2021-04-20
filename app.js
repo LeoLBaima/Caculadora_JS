@@ -43,13 +43,14 @@ function limparvar() {
 }
 
 function limparhist() {
-    document.getElementById('hist').innerText = '0';
+    document.getElementById('hist').innerText = '';
+    document.getElementById('op').innerText = '';
 }
 
 function somar(){
     cond = 1;
     operacao = "add";
- 
+    document.getElementById('op').innerText = '+'
     if(!num1){
         num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
@@ -64,6 +65,7 @@ function somar(){
 function subtrair(){
     cond = 1;
     operacao = "sub";
+    document.getElementById('op').innerText = '-'
     if(!num1){
         num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
@@ -78,7 +80,7 @@ function subtrair(){
 function multiplicar(){
     cond = 1;
     operacao = "mult";
- 
+    document.getElementById('op').innerText = 'x'
     if(!num1){
         num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
@@ -93,8 +95,8 @@ function multiplicar(){
 
 function dividir(){
     cond = 1;
-    operacao = "slice";
- 
+    operacao = "split";
+    document.getElementById('op').innerText = '/'
     if(!num1){
         num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
@@ -169,11 +171,11 @@ function result(){
         num2 = parseFloat(document.getElementById("display").value);
         document.getElementById("display").value = num1*num2;
          
-    } else if(operacao == "slice"){
+    } else if(operacao == "split"){
         num2 = parseFloat(document.getElementById("display").value);
         document.getElementById("display").value = num1/num2;
     }
-    
+
     num1 = 0;
     num2 = 0;
     console.log(document.getElementById("display").value)

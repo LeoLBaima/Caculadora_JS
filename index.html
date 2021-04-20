@@ -14,8 +14,11 @@
 </head>
 <body>
     <div class="calculadora">
-        <p class="hist" id="hist"></p>
-        <input maxlength="5" class="display" id="display" value="0" disabled>
+        <div class="display-container">
+            <p class="hist" id="hist"></p>
+            <p class="op" id=op></p>
+            <input maxlength="5" class="display" id="display" value="0" disabled>
+        </div>
         <table>
             <tr>
                 <td><button class="button" onclick="limpar(); limparhist(); limparvar();">c</button></td>

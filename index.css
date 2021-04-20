@@ -17,6 +17,7 @@ body{
 .calculadora{
     background-color: #f7f7f7;
     padding: 50px;
+    padding-left: 70px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -40,6 +41,11 @@ body{
     background-color: #8a2be2;
 }
 
+.display-container {
+    width: 335px;
+}
+
+
 .display{
     width: 318px;
     height: 70px;
@@ -50,7 +56,6 @@ body{
 
     margin-left: 2px;
     margin-bottom: 4px;
-    padding-right: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
@@ -71,7 +76,6 @@ body{
     color: #fff;
     font-size: 18px;
 
-    margin-bottom: 0px;
     margin-left: 2px;
     padding-right: 5px;
     border-top-left-radius: 5px;
@@ -82,4 +86,10 @@ body{
     justify-content: flex-end;
 
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.op {
+    margin-left: 323px;
+    margin-top: -19px;
+    padding: 0%;
 }
