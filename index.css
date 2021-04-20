@@ -71,12 +71,11 @@ body{
     color: #fff;
     font-size: 18px;
 
+    margin-bottom: 0px;
     margin-left: 2px;
-    margin-bottom: 4px;
     padding-right: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    margin-bottom: 0px;
 
     display: flex;
     align-items: center;

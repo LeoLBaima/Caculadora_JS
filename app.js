@@ -8,22 +8,28 @@ var num2;
 
 
 function numero(n){
-    var numero = document.getElementById('display').value
-    if(numero == 0){
-        numero = '';
-        if(numero.length <= 9) {
-            document.getElementById('display').value = numero.toString() + n.toString();
+    var number = `${document.getElementById('display').value}`
+    if(n != 0){
+        if(number === '0'){
+            number = ''
+        }    
+        if(number.length <= 9) {
+            document.getElementById('display').value = `${number + n}`;
         }
         else {
             return;
         }
-    } else {
-        if(numero.length <= 9) {
-            document.getElementById('display').value = numero.toString() + n.toString();
+    }
+    else{
+        if(number !== '0'){
+            if(number.length <= 9) {
+                document.getElementById('display').value = `${number + n}`;
+            }
+            else {
+                return;
+            }
         }
-        else {
-            return;
-        }
+        else return;       
     }
 }
 
@@ -37,7 +43,7 @@ function limparvar() {
 }
 
 function limparhist() {
-    document.getElementById('hist').value = '0';
+    document.getElementById('hist').innerText = '0';
 }
 
 function somar(){
@@ -45,10 +51,10 @@ function somar(){
     operacao = "add";
  
     if(!num1){
-        num1 = parseFloat((document.getElementById("display").value));
+        num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
     } else{
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         console.log(num2);
     }
     up();
@@ -59,10 +65,10 @@ function subtrair(){
     cond = 1;
     operacao = "sub";
     if(!num1){
-        num1 = parseFloat((document.getElementById("display").value));
+        num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
     } else{
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         console.log(num2);
     }
     up();
@@ -74,11 +80,11 @@ function multiplicar(){
     operacao = "mult";
  
     if(!num1){
-        num1 = parseFloat((document.getElementById("display").value));
+        num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
     
     } else{
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         console.log(num2);
     }
     up();
@@ -90,10 +96,10 @@ function dividir(){
     operacao = "slice";
  
     if(!num1){
-        num1 = parseFloat((document.getElementById("display").value));
+        num1 = parseFloat(document.getElementById("display").value);
         console.log(num1);
     } else{
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         console.log(num2);
     }
     up();
@@ -118,20 +124,19 @@ function sinal(){
 }
 
 function ponto(){
-    document.getElementById("display").style.pointerEvents='none';
-    var ponto = parseFloat((document.getElementById("display").value));
+    var ponto = document.getElementById("display").value;
     document.getElementById("display").value = ponto+'.';
-    var ponto2 = ((document.getElementById("display").value));
+    var ponto2 = document.getElementById("display").value;
     document.getElementById("display").value = ponto2;
     console.log(ponto2);
 }
 
 function bc(){
-    var bc = ((document.getElementById("display").value));
+    var bc = (document.getElementById("display").value);
     var bcar = bc.split("");
     bcar.pop();
     if(bc.length === 1) {
-        document.getElementById("display").value = '';
+        document.getElementById("display").value = '0';
     }
     else {
         document.getElementById("display").value = bcar.join('');
@@ -155,19 +160,20 @@ function result(){
     */
 
     if(operacao == "add"){
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         document.getElementById("display").value = num1+num2;
     } else if(operacao == "sub"){
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         document.getElementById("display").value = num1-num2;
     } else if(operacao == "mult"){
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         document.getElementById("display").value = num1*num2;
          
     } else if(operacao == "slice"){
-        num2 = parseFloat((document.getElementById("display").value));
+        num2 = parseFloat(document.getElementById("display").value);
         document.getElementById("display").value = num1/num2;
     }
+    
     num1 = 0;
     num2 = 0;
     console.log(document.getElementById("display").value)
