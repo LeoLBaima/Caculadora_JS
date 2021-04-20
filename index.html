@@ -15,10 +15,10 @@
 <body>
     <div class="calculadora">
         <p class="hist" id="hist"></p>
-        <p class="display" id="display">0</p>
+        <input maxlength="5" class="display" id="display" value="0" disabled>
         <table>
             <tr>
-                <td><button class="button" onclick="limpar(); limparhist();">c</button></td>
+                <td><button class="button" onclick="limpar(); limparhist(); limparvar();">c</button></td>
                 <td><button class="button" onclick="bc()">bc</button></td>
                 <td><button class="button" onclick="dividir()">/</button></td>
                 <td><button class="button" onclick="somar()">+</button></td>
